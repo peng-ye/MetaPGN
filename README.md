@@ -1,6 +1,6 @@
 # Introduction
 
-The pipeline is divided into two main steps: (i) the construction of pangenome networks and, (ii) the visualization of the resulting pangenome networks.
+This pipeline is used for: (i) construction of pangenome networks and, (ii) visualization of the resulting pangenome networks.
 
 # Requirement
 
@@ -29,7 +29,7 @@ Make sure you have two inputs:
 
 ```shell
 cd Demo
-sh flow.sh ./Data/query.assemblies.fasta ./Data/Escherichia_coli\_K\_12\_substr\_\_MG1655.genes.fasta out\_prefix > work.sh 
+sh flow.sh ./Data/query.assemblies.fasta ./Data/Escherichia_coli_K_12_substr__MG1655.genes.fasta out_prefix > work.sh 
 sh work.sh
 
 ```
