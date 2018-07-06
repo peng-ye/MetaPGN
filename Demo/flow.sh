@@ -12,11 +12,12 @@ echo "# Gene prediction (You should copy ../Scripts/.gm_key to /home/your_dir/ f
 echo "../Scripts/MetaGeneMark_v2.8.pl -i $1 -o $3.predict -s $3.predict -M 100 2>gene_prediction.log"
 
 echo -e "\n# Redundancy elimination"
+# echo "cat *.more100.fa > merged.more100.fa;" # when dealing with two or more (predicted) gene fasta files.
 echo "../Scripts/cd-hit-div -i $3.predict.more100.fa -o $3.sort.fasta -div 1 >cd-hit-div.log"
-echo "cat $3.sort.fasta-* > $3.sort.fasta; rm $3.sort.fasta-*"
-echo "../Scripts/cd-hit-est -i $3.sort.fasta -o $3.90_95.fasta -n 8 -d 0 -g 1 -T 6 -G 0 -aS 0.9 -c 0.95 >cd-hit-est.log"
+
+echo "../Scripts/cd-hit-est -i $3.sort.fasta* -o $3.90_95.fasta -n 8 -d 0 -g 1 -T 6 -G 0 -aS 0.9 -c 0.95 >cd-hit-est.log"
 echo "perl ../Scripts/cdhit_clstr2tbl.pl $3.90_95.fasta.clstr > $3.nrgc 2>$3.nrgc.log"
-echo "perl ../Scripts/cds2ssgc.pl $3.90_95.fasta $3.nrgc >$3.ssgc 2>cds2ssgc.err.log"
+echo "perl ../Scripts/cds2ssgc.pl $3.sort.fasta* $3.nrgc >$3.ssgc 2>cds2ssgc.err.log"
 
 echo -e "\n# Identification of gene status (shared, query-specific, or reference-specific)"
 echo "../Scripts/blat -noHead -noTrimA $2 $3.90_95.fasta $3.ref_cds.blat >blat.log"
