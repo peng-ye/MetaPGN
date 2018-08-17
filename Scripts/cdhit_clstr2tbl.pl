@@ -17,7 +17,7 @@ while(<IN>) {
 		}
 		elsif(/_gene_/)
 		{
-			($gid, $sid) = />((\S+?)_gene_\S+?).../;
+			($gid, $sid) = />((\S+?)_gene_\S+?)... /;
 		}
 		elsif(/>/)
                 {

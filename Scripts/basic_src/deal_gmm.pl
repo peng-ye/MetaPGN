@@ -12,16 +12,18 @@ $mark = $mark || "GL";
 my(@info,$seqid,$i,@temp,$flag,$tmp,%genes,$count,$seq,$len);
 ################################################################################
 open IN,$predict or die "Read $predict $!\n";
-$/="Sequence: >";
+$/="FASTA definition line: ";
 <IN>;
 while(<IN>) {
-    chmod;
+    chomp;
     @info=split /\n/;
     $info[0]=~/^(\S+)\s*.*/;
     $seqid=$1;
-    for($i=7;$i<@info;++$i) {
+    for($i=4;$i<@info;++$i) {
         $flag=0;
-        @temp=split /\s+/,$info[$i];
+        @temp=split /\s+/, $info[$i];
+#if ($seqid eq "scaffold73959_1") {print scalar @temp, "\n";}
+        unshift @temp, " " if (@temp > 0 and $temp[0] ne "");
         next if(@temp < 7);
         if($temp[3]=~/\<(\d+)$/) {
             $flag=1;

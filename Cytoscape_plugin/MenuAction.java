@@ -63,7 +63,7 @@ public class MenuAction extends AbstractCyAction {
 	List<String> nodeBlueEdgeList = new LinkedList<String>();//ergodic blue edges
 	
 	public MenuAction(CyAppAdapter adapter) {
-		super("Arrange node", adapter.getCyApplicationManager(), "network",
+		super("PGN Arrange nodes", adapter.getCyApplicationManager(), "network",
 				adapter.getCyNetworkViewManager());
 		this.adapter = adapter;
 		setPreferredMenu("Select");
@@ -511,7 +511,7 @@ public class MenuAction extends AbstractCyAction {
 					}
 				}				
 			}
-    }¨
+    }
     
 //  middle
     public void blueRedBlue(CyNode areaNode,CyNetwork network,CyNetworkView networkView,
