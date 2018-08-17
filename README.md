@@ -80,7 +80,7 @@ Usage: sh MetaPGN.sh [>MetaPGN.log 2> MetaPGN.err &]
 2. Cytoscape (version 3.0 or above, http://www.cytoscape.org/download.php)
 ### Usage
 #### 1. In the interface in Cytoscape,
-    1.1 Install the plugin *“**pgnVisApp.jar**”* through "Apps > App Manager > Install Apps > Install from file…". These steps are demonstrated as follows:
+​    1.1 Install the plugin *“**pgnVisApp.jar**”* through "Apps > App Manager > Install Apps > Install from file…". These steps are demonstrated as follows:
     *Open “App Manager”*
 
 
