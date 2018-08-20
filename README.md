@@ -81,8 +81,8 @@ Usage: sh MetaPGN.sh [>MetaPGN.log 2> MetaPGN.err &]
 ### Usage
 #### 1. In the interface in Cytoscape,
 ​    1.1 Install the plugin *“**pgnVisApp.jar**”* through "Apps > App Manager > Install Apps > Install from file…". These steps are demonstrated as follows:
-    *Open “App Manager”*
 
+*Open “App Manager”*
 
 ![](./Figures/installation0.png)
 
@@ -143,9 +143,7 @@ network will be arranged according to rules introduced in the paper.
 
 ![](./Figures/arrange1.png)
 
-*The pangenome network after arrangement (Most of the nodes have been arranged,
-
-while others remain in the central area)*
+*The pangenome network after arrangement (Most of the nodes have been arranged, while others remain in the central area)*
 
 ![](./Figures/arrange2.png)
 
