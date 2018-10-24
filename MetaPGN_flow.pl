@@ -95,7 +95,7 @@ elsif($gene eq "assembly"){
                 chomp;
                 my $prefix = $_;
                 $prefix =~ s/.+\///;
-				print "$MGM -i $_ -o $prefix.predict -s $prefix.predict -M $min_gene_len 2>>gene_prediction.log\n";
+                print "$MGM -i $_ -o $prefix.predict -s $prefix.predict -M $min_gene_len 2>>gene_prediction.log\n";
                 $gene_files .= " $prefix.predict.more${min_gene_len}.fa";
             }
             close TMPIN;
