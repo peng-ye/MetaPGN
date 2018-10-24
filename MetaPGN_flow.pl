@@ -91,11 +91,11 @@ elsif($gene eq "assembly"){
         if($query_assemblies=~/list$/){
             my $gene_files;
             open TMPIN, $query_assemblies;
+			print "$MGM -i $_ -o $prefix.predict -s $prefix.predict -M $min_gene_len 2>>gene_prediction.log\n";
             while(<TMPIN>){
                 chomp;
                 my $prefix = $_;
                 $prefix =~ s/.+\///;
-                print "$MGM -i $_ -o $prefix.predict -s $prefix.predict -M $min_gene_len 2>>gene_prediction.log\n";
                 $gene_files .= " $prefix.predict.more${min_gene_len}.fa";
             }
             close TMPIN;

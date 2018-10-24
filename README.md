@@ -18,8 +18,8 @@ This pipeline is used for: (i) construction of pangenome networks (PGNs) and, (i
 
 ### Usage
 #### 1. Make sure you have these two inputs:
-1.1 Query assemblies (e.g., "query.assemblies.fasta" in "Demos/Inputs/assemblies/")
-1.2 A reference genome (e.g., "Escherichia\_coli\_K\_12\_substr\_\_MG1655.genes.fasta" in "Demos/Reference/Gene_features")
+1.1 Query assemblies (e.g., "*query.assemblies.fasta*" in "Demos/Inputs/assemblies/")
+1.2 A reference genome (e.g., "*Escherichia\_coli\_K\_12\_substr\_\_MG1655.genes.fasta*" in "Demos/Reference/Gene_features")
 
 #### 2. Execute the script named “MetaPGN_flow.pl” to generate a shell script (e.g., “MetaPGN.sh”) containing necessary steps in the pipeline (the help text for “MetaPGN_flow.pl” is shown below).
 2.1 Usage
@@ -56,6 +56,7 @@ Based on cd-hit's default algorithm, a sequence is clustered to the first cluste
 -h      <str>   display this help text and exit
 ```
 2.3 Examples
+
 Example 1, the input sequence is nucleotide sequence of assemblies from metagenomes:
 ```
 perl MetaPGN_flow.pl -q Inputs/query.assemblies.list -qt metagenome -ref References/Gene_features/Escherichia_coli_K_12_substr__MG1655.genes.fasta -meta References/Annotations/Escherichia_coli_K_12_substr__MG1655.idx.metadata -p metagenome_assemblies_nt > MetaPGN.sh
